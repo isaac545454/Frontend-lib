@@ -1,0 +1,31 @@
+{
+  "name": "feira",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "typecheck": "turbo typecheck",
+    "start": "turbo start",
+    "postinstall": "node scripts/ensure-built.mjs"
+  },
+  "dependencies": {
+    "@curso/login-sdk": "catalog:",
+    "@isaac545454/frontend-events": "catalog:",
+    "@isaac545454/nucleus": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tsup": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
+  }
+}

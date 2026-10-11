@@ -1,0 +1,32 @@
+{
+  "name": "@feira/shell",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./frame/ZoneFrame": "./src/frame/ZoneFrame.tsx",
+    "./header/SiteHeader": "./src/header/SiteHeader.tsx",
+    "./footer/SiteFooter": "./src/footer/SiteFooter.tsx",
+    "./providers/AppProviders": "./src/providers/AppProviders.tsx",
+    "./product-grid/ProductGrid": "./src/product-grid/ProductGrid.tsx",
+    "./format/money": "./src/format/money.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@curso/login-sdk": "catalog:",
+    "@feira/catalog": "workspace:*",
+    "@feira/events": "workspace:*",
+    "@feira/module-registry": "workspace:*",
+    "@isaac545454/nucleus": "catalog:",
+    "tailwindcss": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:"
+  }
+}

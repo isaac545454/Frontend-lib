@@ -1,0 +1,30 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+catalog:
+  next: 16.2.6
+  react: 19.2.4
+  react-dom: 19.2.4
+  typescript: 5.9.3
+  "@types/react": 19.2.7
+  "@types/react-dom": 19.2.3
+  "@types/node": 22.19.1
+  "@types/express": 5.0.5
+  tailwindcss: 3.4.17
+  postcss: 8.5.6
+  autoprefixer: 10.4.21
+  express: 5.1.0
+  turbo: 2.5.8
+  tsx: 4.20.6
+  tsup: 8.5.0
+  "@isaac545454/nucleus": github:isaac545454/ds-nucleo
+  "@isaac545454/frontend-events": github:isaac545454/frontend-events
+  "@curso/login-sdk": github:isaac545454/sdk-auth#path:packages/login-sdk
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  "@isaac545454/nucleus": true
+  "@isaac545454/frontend-events": true

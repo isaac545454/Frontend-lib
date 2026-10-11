@@ -1,0 +1,23 @@
+{
+  "name": "@feira/events",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./types": "./src/types.ts",
+    "./store": "./src/store.ts",
+    "./useCart": "./src/useCart.tsx",
+    "./useOrders": "./src/useOrders.tsx"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@isaac545454/frontend-events": "catalog:",
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

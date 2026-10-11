@@ -1,0 +1,19 @@
+{
+  "name": "@feira/module-registry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./plugin-manifest": "./src/plugin-manifest.ts",
+    "./registry": "./src/registry.ts",
+    "./zone-origin": "./src/zone-origin.ts",
+    "./zones.json": "./src/zones.json"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}

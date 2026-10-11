@@ -1,0 +1,31 @@
+{
+  "name": "@feira/catalog-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@curso/login-sdk": "catalog:",
+    "@feira/catalog": "workspace:*",
+    "@feira/events": "workspace:*",
+    "@feira/module-registry": "workspace:*",
+    "@feira/shell": "workspace:*",
+    "@isaac545454/nucleus": "catalog:",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

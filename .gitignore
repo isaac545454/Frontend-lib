@@ -1,0 +1,15 @@
+node_modules
+.turbo
+.next
+dist
+*.tsbuildinfo
+*.sqlite
+data
+.DS_Store
+.pnpm-store
+.cache
+.pnpm-install.log
+.typecheck.log
+.tsc-out.txt
+playwright-report
+test-results

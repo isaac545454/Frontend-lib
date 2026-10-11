@@ -1,0 +1,26 @@
+[
+  {
+    "id": "catalog",
+    "basePath": "/catalog",
+    "displayName": "Catálogo",
+    "description": "Busca, categorias e ficha do anúncio.",
+    "homeHref": "/catalog",
+    "devOrigin": "http://127.0.0.1:3001"
+  },
+  {
+    "id": "cart",
+    "basePath": "/cart",
+    "displayName": "Carrinho",
+    "description": "Itens escolhidos e fechamento do pedido.",
+    "homeHref": "/cart",
+    "devOrigin": "http://127.0.0.1:3002"
+  },
+  {
+    "id": "account",
+    "basePath": "/account",
+    "displayName": "Conta",
+    "description": "Entrada, cadastro e pedidos.",
+    "homeHref": "/account",
+    "devOrigin": "http://127.0.0.1:3003"
+  }
+]
