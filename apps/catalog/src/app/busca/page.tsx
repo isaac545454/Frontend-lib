@@ -1,5 +1,5 @@
-import { searchProducts } from "@feira/catalog/products";
-import { ProductGrid } from "@feira/shell/product-grid/ProductGrid";
+import { searchProducts } from "@monorepo/catalog/products";
+import { ProductGrid } from "@monorepo/shell/product-grid/ProductGrid";
 
 export default async function SearchPage({
   searchParams,

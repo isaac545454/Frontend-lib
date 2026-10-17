@@ -1,4 +1,4 @@
-import { categories } from "@feira/catalog/products";
+import { categories } from "@monorepo/catalog/products";
 
 export function CategoryStrip() {
   return (

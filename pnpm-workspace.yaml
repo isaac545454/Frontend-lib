@@ -21,6 +21,7 @@ catalog:
   "@isaac545454/nucleus": github:isaac545454/ds-nucleo
   "@isaac545454/frontend-events": github:isaac545454/frontend-events
   "@curso/login-sdk": github:isaac545454/sdk-auth#path:packages/login-sdk
+  "@sentry/nextjs": 11.8.0
 
 allowBuilds:
   esbuild: true

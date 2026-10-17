@@ -1,5 +1,5 @@
 {
-  "name": "@feira/module-registry",
+  "name": "@monorepo/module-registry",
   "version": "0.1.0",
   "private": true,
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "@feira/cart",
+  "name": "@monorepo/cart",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@curso/login-sdk": "catalog:",
-    "@feira/catalog": "workspace:*",
-    "@feira/events": "workspace:*",
-    "@feira/module-registry": "workspace:*",
-    "@feira/shell": "workspace:*",
+    "@monorepo/catalog": "workspace:*",
+    "@monorepo/events": "workspace:*",
+    "@monorepo/module-registry": "workspace:*",
+    "@monorepo/observability": "workspace:*",
+    "@monorepo/shell": "workspace:*",
+    "@sentry/nextjs": "catalog:",
     "@isaac545454/nucleus": "catalog:",
     "next": "catalog:",
     "react": "catalog:",

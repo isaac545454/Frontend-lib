@@ -1,5 +1,5 @@
 {
-  "name": "@feira/shell",
+  "name": "@monorepo/shell",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@curso/login-sdk": "catalog:",
-    "@feira/catalog": "workspace:*",
-    "@feira/events": "workspace:*",
-    "@feira/module-registry": "workspace:*",
+    "@monorepo/catalog": "workspace:*",
+    "@monorepo/events": "workspace:*",
+    "@monorepo/module-registry": "workspace:*",
     "@isaac545454/nucleus": "catalog:",
     "tailwindcss": "catalog:",
     "react": "catalog:",

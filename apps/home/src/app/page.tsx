@@ -1,5 +1,5 @@
-import { products } from "@feira/catalog/products";
-import { ProductGrid } from "@feira/shell/product-grid/ProductGrid";
+import { products } from "@monorepo/catalog/products";
+import { ProductGrid } from "@monorepo/shell/product-grid/ProductGrid";
 
 export default function HomePage() {
   const offers = products.slice(0, 8);

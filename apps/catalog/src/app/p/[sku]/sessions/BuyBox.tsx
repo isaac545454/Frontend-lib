@@ -1,8 +1,8 @@
 "use client";
 
-import type { Product } from "@feira/catalog/types";
-import { useCart } from "@feira/events/useCart";
-import { formatMoney, installmentLabel } from "@feira/shell/format/money";
+import type { Product } from "@monorepo/catalog/types";
+import { useCart } from "@monorepo/events/useCart";
+import { formatMoney, installmentLabel } from "@monorepo/shell/format/money";
 import { Badge } from "@isaac545454/nucleus/badge";
 import { Button } from "@isaac545454/nucleus/button";
 import { Card } from "@isaac545454/nucleus/card";

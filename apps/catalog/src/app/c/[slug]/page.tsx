@@ -1,5 +1,5 @@
-import { getCategory, searchProducts } from "@feira/catalog/products";
-import { ProductGrid } from "@feira/shell/product-grid/ProductGrid";
+import { getCategory, searchProducts } from "@monorepo/catalog/products";
+import { ProductGrid } from "@monorepo/shell/product-grid/ProductGrid";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { useSession } from "@curso/login-sdk/react";
-import { pluginManifests } from "@feira/module-registry/registry";
-import { useCart } from "@feira/events/useCart";
+import { pluginManifests } from "@monorepo/module-registry/registry";
+import { useCart } from "@monorepo/events/useCart";
 import { Button } from "@isaac545454/nucleus/button";
 import { Input } from "@isaac545454/nucleus/input";
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { ZoneFrame } from "@feira/shell/frame/ZoneFrame";
+import { ZoneFrame } from "@monorepo/shell/frame/ZoneFrame";
 
 import "@isaac545454/nucleus/styles.css";
 import "./globals.css";

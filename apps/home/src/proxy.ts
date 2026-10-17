@@ -1,5 +1,5 @@
-import { authApiOrigin, zoneOrigin } from "@feira/module-registry/zone-origin";
-import { pluginManifests } from "@feira/module-registry/registry";
+import { authApiOrigin, zoneOrigin } from "@monorepo/module-registry/zone-origin";
+import { pluginManifests } from "@monorepo/module-registry/registry";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
@@ -29,5 +29,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  // `monitoring` é o tunnel do Sentry. Fica fora do proxy para o rewrite do SDK responder.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|monitoring).*)"],
 };

@@ -1,14 +1,20 @@
+import { loadSentryBuildEnv, sentryBuildOptions } from "@monorepo/observability/next-config";
+import { withSentryConfig } from "@sentry/nextjs/config";
 import type { NextConfig } from "next";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import zones from "../../packages/module-registry/src/zones.json";
 
+const repoRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
+loadSentryBuildEnv(repoRoot);
+
 const transpilePackages = [
-  "@feira/catalog",
-  "@feira/events",
-  "@feira/module-registry",
-  "@feira/shell",
+  "@monorepo/catalog",
+  "@monorepo/events",
+  "@monorepo/module-registry",
+  "@monorepo/observability",
+  "@monorepo/shell",
   "@isaac545454/nucleus",
   "@curso/login-sdk",
 ];
@@ -20,7 +26,7 @@ function zoneOrigin(zone: { id: string; devOrigin: string }) {
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: path.join(path.dirname(fileURLToPath(import.meta.url)), "../.."),
+    root: repoRoot,
   },
   transpilePackages,
   async rewrites() {
@@ -43,4 +49,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withSentryConfig(nextConfig, sentryBuildOptions());

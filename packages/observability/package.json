@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo/observability",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./options": "./src/options.ts",
+    "./next-config": "./src/next-config.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}

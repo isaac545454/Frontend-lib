@@ -8,11 +8,11 @@ O browser entra sempre por `http://localhost:3000`. As outras apps não aparecem
 
 | App | Prefixo | Porta | Papel |
 | --- | --- | --- | --- |
-| `@feira/home` | `/` | 3000 | Shell, ofertas, proxy de dev |
-| `@feira/catalog-app` | `/catalog` | 3001 | Busca, categoria, ficha |
-| `@feira/cart` | `/cart` | 3002 | Carrinho e checkout |
-| `@feira/account` | `/account` | 3003 | Login, cadastro, pedidos |
-| `@feira/auth-api` | `/api` | 3333 | Sessão com `@curso/login-sdk` |
+| `@monorepo/home` | `/` | 3000 | Shell, ofertas, proxy de dev |
+| `@monorepo/catalog-app` | `/catalog` | 3001 | Busca, categoria, ficha |
+| `@monorepo/cart` | `/cart` | 3002 | Carrinho e checkout |
+| `@monorepo/account` | `/account` | 3003 | Login, cadastro, pedidos |
+| `@monorepo/auth-api` | `/api` | 3333 | Sessão com `@curso/login-sdk` |
 
 Em dev, `apps/home/src/proxy.ts` encaminha o prefixo. Em `next start`, o `rewrites` do host faz o mesmo. Produção real pode trocar isso por nginx/CDN sem mudar as zonas.
 
@@ -25,7 +25,7 @@ Em dev, `apps/home/src/proxy.ts` encaminha o prefixo. Em `next start`, o `rewrit
 O que atravessa a navegação entre zonas:
 
 - **URL** para busca e ficha (`/catalog/busca?q=`, `/catalog/p/FR1001`).
-- **`@feira/events`** para carrinho e pedidos. O pacote usa `@isaac545454/frontend-events` e persiste o snapshot em `localStorage`, com `BroadcastChannel` para outra aba. Cada documento hidrata de novo porque a troca de zona é navegação completa.
+- **`@monorepo/events`** para carrinho e pedidos. O pacote usa `@isaac545454/frontend-events` e persiste o snapshot em `localStorage`, com `BroadcastChannel` para outra aba. Cada documento hidrata de novo porque a troca de zona é navegação completa.
 - **Token** de login no `localStorage` (`curso.token`), gravado pelo `@curso/login-sdk`. A API sobe em `/api` no mesmo domínio, via proxy.
 
 ## Dependências externas
@@ -64,6 +64,6 @@ pnpm build
 
 1. App em `apps/<nome>` com `basePath` igual ao prefixo público.
 2. Entrada em `packages/module-registry/src/zones.json` (`id`, `basePath`, `homeHref`, `devOrigin`).
-3. Dependência dos pacotes `@feira/*` que a zona importa.
+3. Dependência dos pacotes `@monorepo/*` que a zona importa.
 
 O header e o proxy de dev passam a conhecer o prefixo sem lista solta na home.

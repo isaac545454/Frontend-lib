@@ -1,4 +1,4 @@
-import type { Product } from "@feira/catalog/types";
+import type { Product } from "@monorepo/catalog/types";
 
 import { ProductCard } from "./ProductCard";
 

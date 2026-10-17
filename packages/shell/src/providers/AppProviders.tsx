@@ -1,7 +1,7 @@
 "use client";
 
 import { SessionProvider, useSession } from "@curso/login-sdk/react";
-import { publishAuthChanged } from "@feira/events/store";
+import { publishAuthChanged } from "@monorepo/events/store";
 import { useEffect, type ReactNode } from "react";
 
 function AuthEventsBridge() {

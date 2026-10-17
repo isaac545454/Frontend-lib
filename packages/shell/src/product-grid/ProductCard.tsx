@@ -1,4 +1,4 @@
-import type { Product } from "@feira/catalog/types";
+import type { Product } from "@monorepo/catalog/types";
 import { Badge } from "@isaac545454/nucleus/badge";
 import { Card } from "@isaac545454/nucleus/card";
 

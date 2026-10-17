@@ -1,7 +1,7 @@
 "use client";
 
-import { useCart } from "@feira/events/useCart";
-import { formatMoney } from "@feira/shell/format/money";
+import { useCart } from "@monorepo/events/useCart";
+import { formatMoney } from "@monorepo/shell/format/money";
 import { Button } from "@isaac545454/nucleus/button";
 import { Card } from "@isaac545454/nucleus/card";
 

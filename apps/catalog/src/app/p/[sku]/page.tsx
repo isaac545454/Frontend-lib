@@ -1,4 +1,4 @@
-import { getProduct } from "@feira/catalog/products";
+import { getProduct } from "@monorepo/catalog/products";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 

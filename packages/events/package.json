@@ -1,5 +1,5 @@
 {
-  "name": "@feira/events",
+  "name": "@monorepo/events",
   "version": "0.1.0",
   "private": true,
   "type": "module",
