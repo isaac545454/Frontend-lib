@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     "./options": "./src/options.ts",
-    "./next-config": "./src/next-config.ts"
+    "./next-config": "./src/next-config.ts",
+    "./faro": "./src/faro.ts"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
@@ -13,5 +14,9 @@
   "devDependencies": {
     "@types/node": "catalog:",
     "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@grafana/faro-web-sdk": "^2.12.1",
+    "@grafana/faro-web-tracing": "^2.12.1"
   }
 }
