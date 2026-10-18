@@ -9,14 +9,20 @@ export function CartView() {
   const cart = useCart();
 
   if (!cart.ready) {
-    return <p className="rounded-md bg-white p-6 text-neutral-700">Abrindo carrinho</p>;
+    return (
+      <p className="rounded-md bg-white p-6 text-neutral-700">
+        Abrindo carrinho
+      </p>
+    );
   }
 
   if (cart.lines.length === 0) {
     return (
       <section className="rounded-md bg-white p-6">
         <h1 className="text-xl text-neutral-950">Carrinho vazio</h1>
-        <p className="mt-2 text-neutral-600">Os anúncios que você guardar aparecem aqui, em qualquer zona.</p>
+        <p className="mt-2 text-neutral-600">
+          Os anúncios que você guardar aparecem aqui, em qualquer zona.
+        </p>
         <Button asChild className="mt-4">
           <a href="/catalog">Ver anúncios</a>
         </Button>
@@ -38,20 +44,47 @@ export function CartView() {
                   aria-hidden
                 />
                 <div className="min-w-0 flex-1">
-                  <a href={`/catalog/p/${line.sku}`} className="text-neutral-900 hover:text-[var(--feira-link)]">
+                  <a
+                    href={`/catalog/p/${line.sku}`}
+                    className="text-neutral-900 hover:text-[var(--feira-link)]"
+                  >
                     {line.title}
                   </a>
-                  <p className="text-sm text-[var(--feira-price)]">{formatMoney(line.price)}</p>
+                  <p className="text-sm text-[var(--feira-price)]">
+                    {formatMoney(line.price)}
+                  </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Button type="button" variant="outline" size="icon" aria-label={`Diminuir ${line.title}`} onClick={() => cart.setQuantity(line.sku, line.quantity - 1)}>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    aria-label={`Diminuir ${line.title}`}
+                    onClick={() =>
+                      cart.setQuantity(line.sku, line.quantity - 1)
+                    }
+                  >
                     −
                   </Button>
-                  <span className="w-6 text-center text-sm">{line.quantity}</span>
-                  <Button type="button" variant="outline" size="icon" aria-label={`Aumentar ${line.title}`} onClick={() => cart.setQuantity(line.sku, line.quantity + 1)}>
+                  <span className="w-6 text-center text-sm">
+                    {line.quantity}
+                  </span>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon"
+                    aria-label={`Aumentar ${line.title}`}
+                    onClick={() =>
+                      cart.setQuantity(line.sku, line.quantity + 1)
+                    }
+                  >
                     +
                   </Button>
-                  <Button type="button" variant="ghost" onClick={() => cart.remove(line.sku)}>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    onClick={() => cart.remove(line.sku)}
+                  >
                     Remover
                   </Button>
                 </div>
