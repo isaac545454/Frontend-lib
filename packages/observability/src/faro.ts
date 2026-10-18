@@ -27,7 +27,7 @@ if (typeof window !== "undefined" && !isInternalFaroOnGlobalObject()) {
       return item;
     },
     instrumentations: [
-      ...getWebInstrumentations(),
+      ...getWebInstrumentations({ captureConsole: false }),
       new TracingInstrumentation(),
     ],
   });

@@ -5,6 +5,9 @@ import { ZoneFrame } from "@monorepo/shell/frame/ZoneFrame";
 
 import "@isaac545454/nucleus/styles.css";
 import "./globals.css";
+import { logServerBoot } from "../sentry.server.config";
+
+void logServerBoot("home");
 
 export const metadata: Metadata = {
   title: "Feira",

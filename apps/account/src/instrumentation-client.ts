@@ -10,9 +10,14 @@ Sentry.init({
       shouldCreateSpanForRequest: (url) => !url.includes("faro-collector"),
     }),
     Sentry.replayIntegration(),
+    Sentry.consoleLoggingIntegration({ levels: ["log", "info", "warn", "error"] }),
   ],
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1,
 });
+
+Sentry.logger.info("fake client info", { zone: "account" });
+Sentry.logger.warn("fake client warn", { zone: "account" });
+Sentry.logger.error("fake client error", { zone: "account" });
 
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
